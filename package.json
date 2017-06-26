@@ -1,0 +1,30 @@
+{
+  "name": "food-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhu7235/food-share.git"
+  },
+  "keywords": [
+    "food",
+    "share",
+    "side",
+    "project"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhu7235/food-share/issues"
+  },
+  "homepage": "https://github.com/jhu7235/food-share#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "nunjucks": "^3.0.1"
+  }
+}
