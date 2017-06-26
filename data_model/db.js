@@ -5,4 +5,31 @@ var db = new Sequelize(
 
 //need table for users
 
-var Growers, Users, Vegatables
+var Growers, Vegatables;
+
+var Users = db.define('user', {
+	security: {
+		type: Sequelize.ENUM('seller', 'buyer', 'admin', 'developer'),
+		defaultValue: 'consumer'
+	},
+	name: {
+		type: Sequelize.STRING
+
+	},
+
+
+}, {
+
+});
+
+var Transactions = db.define('transactions', {
+	total: {type: Sequelize.INTEGER},
+	date: {type: Sequelize.DATE}
+})
+
+var Items = db.define('items', {
+
+})
+
+Users.belongsTo('Transaction', {as: 'buyer'});
+Users.belongsTo('Transaction', {as: 'seller' });
