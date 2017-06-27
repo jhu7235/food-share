@@ -8,8 +8,11 @@ const bodyParse = require('body-parser');
 const router = require('./routes').router;
 /*  ----   routing  ----   */
 const db = require('./data_model').db;
+const seed = require('./seed');
 const portNum = 1871;
 
+
+seed();
 app.use('/', router);
 
 
