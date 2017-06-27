@@ -2,7 +2,7 @@ const express = require('express');
 	const app = express();
 const nunjucks = require('nunjucks');
 const bodyParse = require('body-parser');
-const dataModels = require('./data_models');
+const dataModels = require('./data_model');
 const routes = require('./routes');
 
 const TAG = 'app.js: ';
