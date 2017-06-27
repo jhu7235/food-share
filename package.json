@@ -27,5 +27,8 @@
     "express": "^4.15.3",
     "nunjucks": "^3.0.1",
     "sequelize": "^4.2.0"
+  },
+  "devDependencies": {
+    "pg": "^6.4.0"
   }
 }
