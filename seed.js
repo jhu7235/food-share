@@ -25,7 +25,20 @@ const createTransactions = function () {
 
 const createItems = function() {
 	db.Items.bulkCreate(
-	{}
+	[
+		{name: bananna, price: 2},
+		{name: appple, price: 2},
+		{name: strawberry, price: 2},
+		{name: potato, price: 2},
+		{name: carrot, price: 1},
+		{name: cucumber, price: 1},
+		{name: squash, price: 2},
+		{name: zucchini, price: 2},
+		{name: spinach, price: 2},
+		{name: kale, price: 2},
+		{name: beets, price: 2},
+		{name: avocado, price: 3}
+	]
 	);
 };
 var seed = function() {
