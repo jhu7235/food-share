@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Search Pages </h3>
+  {%for item in items %}
+  <row>
+  	<div class="col-md-3"><img src="" alt=""></div>
+  	<div class="col-md-7">
+  		<title>{{item.name}}</title>
+  		<ul>
+  			<li></li>
+  			<li></li>
+  			<li></li>
+  		</ul>
+  	</div>
+  	<div class="col-md-2"><button></button></div>
+  </row>
+	{% endfor%}
+{% endblock %}

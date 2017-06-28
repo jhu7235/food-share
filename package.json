@@ -24,8 +24,12 @@
   "homepage": "https://github.com/jhu7235/food-share#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
     "express": "^4.15.3",
+    "morgan": "^1.8.2",
     "nunjucks": "^3.0.1",
+    "nunjucks-autoescape": "^1.0.1",
+    "path": "^0.12.7",
     "sequelize": "^4.2.0"
   }
 }
