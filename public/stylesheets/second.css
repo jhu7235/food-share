@@ -10,3 +10,8 @@ div {
     display: block;
 }
 
+#check {
+    height: 14px;
+    width: 14px;
+}
+
