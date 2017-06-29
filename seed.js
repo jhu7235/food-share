@@ -25,6 +25,7 @@ const createTransactions = function () {
 };
 
 const createItems = function() {
+
 	// console.log('CREATEITEMS DB:', db);
 	return Items.bulkCreate(
 	[
