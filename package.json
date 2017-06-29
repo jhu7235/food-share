@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "express": "^4.15.3",
+    "jquery": "^3.2.1",
     "morgan": "^1.8.2",
     "nunjucks": "^3.0.1",
     "nunjucks-autoescape": "^1.0.1",

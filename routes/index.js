@@ -14,6 +14,11 @@ router.get('/search', function (req, res, next)  {
 	res.render('search');
 });
 
+router.get('/profile', function (req, res, next)  {
+	console.log(TAG)
+	res.render('profile');
+});
+
 router.use('/', itemsRouter);
 router.use('/users', userRouter);
 router.use('/transactions', transactionsRouter);

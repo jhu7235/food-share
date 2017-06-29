@@ -33,6 +33,8 @@ app.get('/', function (req, res, next) {
 });
 
 app.use(express.static(path.join(__dirname, '/public')));
+app.use('/bootstrap', express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 
 app.listen(portNum, function () {
 	db.sync({force: true})
