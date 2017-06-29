@@ -10,7 +10,7 @@ const nunjucks = require('nunjucks');
 /*  ----   routing  ----   */
 const db = require('./data_model').db;
 const seed = require('./seed');
-const portNum = 1871;
+const portNum = 3000;
 const path = require('path');
 const morgan = require('morgan');
 var env = nunjucks.configure('views', {noCache: true});
@@ -21,7 +21,10 @@ app.engine('html', nunjucks.render);
 // const AutoEscapeExtension = require('nunjucks-autoescape')(nunjucks);
 // env.addExtension('AutoEscapeExtension', new AutoEscapeExtension(env));
 
-seed();
+app.get('/search', function (req, res, next)  {
+	console.log(TAG);
+	res.render('search');
+});
 
 app.use('/', router);
 
@@ -32,8 +35,12 @@ app.get('/', function (req, res, next) {
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.listen(portNum, function () {
-	db.sync();
-	console.log(TAG, 'db sync-ed');
+	db.sync({force: true})
+	.then( () => {
+		console.log(TAG, 'DB-CLEARED');
+		seed();
+	})
+	.catch(console.error.bind(console));
 	console.log(TAG, 'port ' + portNum + ' is open');
 });
 

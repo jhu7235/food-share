@@ -19,7 +19,7 @@ var Users = db.define('user', {
 }, {});
 
 
-var Transactions = db.define('transactions', {
+var Transactions = db.define('transaction', {
 	total: {
 		type: Sequelize.FLOAT,
 		notNull: true
@@ -27,15 +27,17 @@ var Transactions = db.define('transactions', {
 	date: {type: Sequelize.DATE}
 });
 
-var Items = db.define('items', {
+var Items = db.define('item', {
 	category: {
-		type: Sequelize.ENUM('fruit', 'veggie', 'herb'),
+		type: Sequelize.ENUM('fruit', 'vegetable', 'herb'),
+		notNull: true,
 	},
-	name: { type: Sequelize.STRING },
-	price: { type: Sequelize.INTEGER },
+	name: { type: Sequelize.STRING, notNull: true },
+	price: { type: Sequelize.INTEGER, notNull: true },
 	imageUrl: { type: Sequelize.STRING}
 });
 
+console.log('ITEMS:', Items);
 
 Users.belongsTo(Transactions, {as: 'buyer'});
 Users.belongsTo(Transactions, {as: 'seller' });

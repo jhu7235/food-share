@@ -1,9 +1,37 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #DFFFE7;
 }
 
-a {
-  color: #00B7FF;
+/*a {
+  color: #62DE88;
+}*/
+/*img {
+	max-width: 100%;
+	min-height: 100%;
+}
+*/
+.row[data-type='produce-row'] {
+  overflow: hidden;
+
+	padding: 10px;
+	height: 150	px;
 }
 
+.row[data-type='produce-row'] h3{
+	margin: 0;
+}
+
+.row {
+	border: solid black 1px;
+}
+
+.clearfix {
+	clear: both;
+	content: '';
+	display: block ;
+}
+.navbar.navbar-fixed-top.navbar-light {
+    background-color: green;
+}

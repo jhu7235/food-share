@@ -14,11 +14,9 @@ router.get('/search', function (req, res, next)  {
 	res.render('search');
 });
 
+router.use('/', itemsRouter);
 router.use('/users', userRouter);
 router.use('/transactions', transactionsRouter);
-router.use('/fruit', itemsRouter);
-router.use('/herb', itemsRouter);
-router.use('/veggie', itemsRouter);
 router.use('/search', searchRouter);
 
 module.exports.router = router;

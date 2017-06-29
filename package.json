@@ -30,6 +30,8 @@
     "nunjucks": "^3.0.1",
     "nunjucks-autoescape": "^1.0.1",
     "path": "^0.12.7",
+    "sass": "^1.0.0-beta.1",
+    "scss": "^0.2.4",
     "sequelize": "^4.2.0"
   },
   "devDependencies": {
